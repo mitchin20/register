@@ -15,6 +15,9 @@ const PORT: number = process.env.PORT ? parseInt(process.env.PORT) : 3001;
 // Allow origins
 const allowedOrigins = ["XXXXXXXXXXXXXXXXXXXXX", "XXXXXXXXXXXXXXXXXXXXX"];
 
+// Serve static files from the public directory
+app.use(express.static("public"));
+
 // Middleware to parse JSON
 app.use(express.json());
 app.use(helmet());
